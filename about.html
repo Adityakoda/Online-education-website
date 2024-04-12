@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+</head>
+<style>
+    *{
+    margin:0;
+    padding:0;;
+    border:0;
+    outline:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    
+    font-family: "Montserrat",sans-serif;
+    line-height: 1.7;
+    color: #fff;
+    background:  #1e1e1e;
+}
+.categories{
+    /* background: #00000041; */
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.categories h1{
+    line-height: 1;
+    margin-bottom: 3rem;
+    color: #00e77f;
+    font-size: 50px;
+    margin-top: 120px;
+    margin-left: 100px;
+    padding: 50px;
+
+}
+.categories__container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap:4rem;
+}
+img{
+    width: 50px;
+    height: 50px;
+}
+.categories__right{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.2rem;
+    
+} 
+.category{
+    background: #00e77f;
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: all 400ms ease;
+     box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
+.categories h5{
+    color: #0a3a1a;
+    font-size: medium;
+}
+.categories__right{
+    color: #000000;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+.category h5{
+    margin: 2rem 0 1rem;
+}
+.category p{
+    font-size: 25px;
+}
+a{
+    color: #000000;
+    font-size: 25px;
+}
+h0{
+    font-size: 18px;
+}
+nav{
+    background:#00e77f;
+    width:100vw;
+    height: 5rem;
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 0px #00e77f, 0px 2px 16px #00e77f;
+}
+.nav__container{
+    height: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__menu{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+   
+}
+.nav__menu a{
+    font-size: 18px;
+    transition: all 400ms ease;
+}
+
+h4{
+     font-size: 30px;
+    color: #013a34;
+    font-family: "Montserrat",sans-serif;
+}
+.cont{
+    width: 80%;
+    margin:0 auto;
+
+} 
+.img2{
+    width: 100%;
+    height: 300px;
+    
+}
+
+.category:hover{
+    /* box-shadow: 0 3rem 3rem rgb(0, 0, 0); */
+    box-shadow: 0 3rem 3rem rgb(98, 121, 95);
+    z-index: 1;
+}
+h2{
+    color: #00e77f;
+    font-size: 40px;
+    margin-left: 500px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+h3{
+    color: #00e77f;
+    font-size: 50px;
+    margin-left: 550px;
+    padding-top: 40px;
+}
+.img4{
+    height: 200px;
+    width: 200px;
+}
+.team_container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    margin-left: 50px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+}
+.team_member{
+    padding: 40px;
+    background-color: #31ae63;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.team_member:hover{
+    background: transparent;
+    border-color: #00e77f;
+}
+.team_info{
+    text-align: center;
+    margin-top: 1rem;
+    padding: 20px;
+    margin-bottom: -20px;
+}
+
+.team_socials{
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #0bf795;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0px 0px 0px #00e77f, 0px 2px 16px #00e77f;
+    transition: all 400ms ease;
+}
+.img3{
+    height: 1rem;
+    width: 1rem;
+}
+.team_socials a{
+    padding:1rem;
+    
+}
+.team_member:hover .team_socials{
+    right: 0;
+}
+h6{
+    color: aliceblue;
+    font-size: 20px;
+}
+.team_info p{
+    color: antiquewhite;
+}
+.img5{
+    height: 1rem;
+    width: 1rem;
+}
+footer{
+    background-color: #00e77f;
+    padding-top: 2rem;
+    font-size: 0.9rem;
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.footer_container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5rem;
+    margin-left: 60px;
+}
+.footer_container > div h4{
+    margin-bottom: 1.2rem;
+}
+.footer_1 p{
+    margin:0 0 2rem;
+    color: #000000;
+}
+footer ul li{
+    margin-bottom: 0.7rem;
+}
+.social_img{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+.footer_4 p{
+    color: #000000;
+}
+.footer_3 a{
+    font-size: 15px;
+}
+.footer_2 a{
+    font-size: 15px;
+}
+</style>
+<body>
+    <nav>
+        <div class="cont nav__container">
+            <a href="edu.html"><h4>BRILLICIO</h4></a>
+            <ul class="nav__menu">
+                <li><a href="edu.html"><h0>Home</h0></a></li>
+                <li><a href="about.html"><h0>About</h0></a></li>
+                <li><a href="courses.html"><h0>Courses</h0></a></li>
+                <li><a href="contact.html"><h0>Contact</h0></a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="head">
+        <div class="headimg">
+            <img src="/img/header3.jpg" class="img2">
+        </div>
+    </section>
+    <section class="categories">
+        <h3>About Us</h3>
+        <div class=" categories__container">
+            <div class="categories__left">
+                <h1>GROW  YOUR SKILLS WITH US </h1>
+                <!-- <a href="#" class="btn">Learn More</a> -->
+            </div>
+            <div class="categories__right">
+                <article class="category">
+                    <span class="category_icon">
+                       
+                            <img src="img/play.png" class="img">
+                       
+                    </span>
+                    <h5>Videos</h5>
+                    <p>250+</p>
+                </article>
+
+                <article class="category">
+                    <span class="category_icon">
+                       
+                            <img src="img/ebook.png" class="img">
+                     
+                    </span>
+                    <h5>Courses</h5>
+                    <p>50+</p>
+                </article>
+                <article class="category">
+                    <span class="category_icon">
+                        
+                            <img src="img/teacher.png"class="img">
+                       
+                    </span>
+                    <h5>Teachers</h5>
+                    <p>50+</p>
+                </article>
+                <article class="category">
+                    <span class="category_icon">
+                        
+                            <img src="img/graduated.png"class="img">
+                       
+                    </span>
+                    <h5>Students</h5>
+                    <p>700+</p>
+                </article>
+                <article class="category">
+                    <span class="category_icon">
+                        
+                            <img src="img/choice.png"class="img">
+                       
+                    </span>
+                    <h5>Satisfaction</h5>
+                    <p>100%</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team_container">
+        <article class="team_member">
+            <div class="team_img">
+                <img src="/img/person.png" class="img4">
+            </div>
+            <div class="team_info">
+                <h6>Aditya koda</h6>
+                <p>Expert tutor</p>
+            </div>
+            <div class="team_socials">
+                <a href="http://instagram.com" target="_blank"><img src="/img/instagram.png" class="img3"></a>
+                <a href="http://twitter.com" target="_blank"><img src="/img/twitter.png" class="img3"></a>
+                <a href="http://linkedin.com" target="_blank"><img src="/img/linkedin.png" class="img3"></a>
+            </div>
+        </article>
+
+        <article class="team_member">
+            <div class="team_img">
+                <img src="/img/person.png" class="img4">
+            </div>
+            <div class="team_info">
+                <h6>Aditya koda</h6>
+                <p>Expert tutor</p>
+            </div>
+            <div class="team_socials">
+                <a href="http://instagram.com" target="_blank"><img src="/img/instagram.png" class="img3"></a>
+                <a href="http://twitter.com" target="_blank"><img src="/img/twitter.png" class="img3"></a>
+                <a href="http://linkedin.com" target="_blank"><img src="/img/linkedin.png" class="img3"></a>
+            </div>
+        </article>
+
+        <article class="team_member">
+            <div class="team_img">
+                <img src="/img/person.png" class="img4">
+            </div>
+            <div class="team_info">
+                <h6>Aditya koda</h6>
+                <p>Expert tutor</p>
+            </div>
+            <div class="team_socials">
+                <a href="http://instagram.com" target="_blank"><img src="/img/instagram.png" class="img3"></a>
+                <a href="http://twitter.com" target="_blank"><img src="/img/twitter.png" class="img3"></a>
+                <a href="http://linkedin.com" target="_blank"><img src="/img/linkedin.png" class="img3"></a>
+            </div>
+        </article>
+
+        <article class="team_member">
+            <div class="team_img">
+                <img src="/img/person.png" class="img4">
+            </div>
+            <div class="team_info">
+                <h6>Aditya koda</h6>
+                <p>Expert tutor</p>
+            </div>
+            <div class="team_socials">
+                <a href="http://instagram.com" target="_blank"><img src="/img/instagram.png" class="img3"></a>
+                <a href="http://twitter.com" target="_blank"><img src="/img/twitter.png" class="img3"></a>
+                <a href="http://linkedin.com" target="_blank"><img src="/img/linkedin.png" class="img3"></a>
+            </div>
+        </article>
+
+        <article class="team_member">
+            <div class="team_img">
+                <img src="/img/person.png" class="img4">
+            </div>
+            <div class="team_info">
+                <h6>Aditya koda</h6>
+                <p>Expert tutor</p>
+            </div>
+            <div class="team_socials">
+                <a href="http://instagram.com" target="_blank"><img src="/img/instagram.png" class="img3"></a>
+                <a href="http://twitter.com" target="_blank"><img src="/img/twitter.png" class="img3"></a>
+                <a href="http://linkedin.com" target="_blank"><img src="/img/linkedin.png" class="img3"></a>
+            </div>
+        </article>
+
+        <article class="team_member">
+            <div class="team_img">
+                <img src="/img/person.png" class="img4">
+            </div>
+            <div class="team_info">
+                <h6>Aditya koda</h6>
+                <p>Expert tutor</p>
+            </div>
+            <div class="team_socials">
+                <a href="http://instagram.com" target="_blank"><img src="/img/instagram.png" class="img3"></a>
+                <a href="http://twitter.com" target="_blank"><img src="/img/twitter.png" class="img3"></a>
+                <a href="http://linkedin.com" target="_blank"><img src="/img/linkedin.png" class="img3"></a>
+            </div>
+        </article>
+
+        <article class="team_member">
+            <div class="team_img">
+                <img src="/img/person.png" class="img4">
+            </div>
+            <div class="team_info">
+                <h6>Aditya koda</h6>
+                <p>Expert tutor</p>
+            </div>
+            <div class="team_socials">
+                <a href="http://instagram.com" target="_blank"><img src="/img/instagram.png" class="img3"></a>
+                <a href="http://twitter.com" target="_blank"><img src="/img/twitter.png" class="img3"></a>
+                <a href="http://linkedin.com" target="_blank"><img src="/img/linkedin.png" class="img3"></a>
+            </div>
+        </article>
+
+        <article class="team_member">
+            <div class="team_img">
+                <img src="/img/person.png" class="img4">
+            </div>
+            <div class="team_info">
+                <h6>Aditya koda</h6>
+                <p>Expert tutor</p>
+            </div>
+            <div class="team_socials">
+                <a href="http://instagram.com" target="_blank"><img src="/img/instagram.png" class="img3"></a>
+                <a href="http://twitter.com" target="_blank"><img src="/img/twitter.png" class="img3"></a>
+                <a href="http://linkedin.com" target="_blank"><img src="/img/linkedin.png" class="img3"></a>
+            </div>
+        </article>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class =" footer_container">
+            <div class="footer_1">
+                <a href="edu.html" class="footer_logo"><h4>Brillicio</h4></a>
+                <p>Grow your skills with US</p>
+            </div>
+            <div class="footer_2">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                    <li><a href="edu.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Courses </a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer_3">
+                <h4>Privacy</h4>
+                <ul class="privacy">
+                    <li><a href="#">Privacy Policy</a></li>
+                   <li><a href="#">Terms And Conditions</a></li>
+                    <li><a href="#">Refund Policy </a></li>
+                </ul>
+            </div>
+            <div class="footer_4">
+                <h4>Contact Us</h4>
+                <div>
+                    <p>+91 12345 09876</p>
+                    <p>brilliciotop@gmail.com</p>
+                </div>
+                <ul class="social_img">
+                    <li>
+                        <img src="/img/facebook.png" class="img5">
+                    </li>
+                    <li>
+                        <img src="/img/instagram.png"class="img5">
+                    </li>
+                    <li>
+                       <img src="/img/twitter.png"class="img5">
+                    </li>
+                    <li>
+                        <img src="/img/linkedin.png"class="img5">
+                    </li>
+                </ul>
+            </div>
+            
+            
+        </div>
+    </footer>
+</body>
+</html>
